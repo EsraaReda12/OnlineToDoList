@@ -1,0 +1,41 @@
+﻿@model ToDoList.Models.ToDoList
+
+@{
+    Layout = null;
+}
+    <div class="modal-dialog" id="form">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myReviewLabel">Fill Data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <div id="message-review">
+                    </div>
+@using (Html.BeginForm("AddEdit", "Home", FormMethod.Post, new { @Id = "frmAddEdit", @role = "form"}))
+{
+                    @Html.HiddenFor(m => m.Id)
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Title, new { @clas = "control-label" })
+                        @Html.TextBoxFor(m => m.Title, new { @clas = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.DueDate, new { @clas = "control-label" })
+                        @Html.TextBoxFor(m => m.DueDate, new { htmlAttributes = new { @readonly = "true", Value = Model.DueDate.ToString("dd-MMM-yyyy"), @class = "form-control datepicker", @id = "txtduedate" } })
+                    </div>
+}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <input type="button" value="Submit" onclick="Submit()" />
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+    #form {
+        position: initial;
+    }
+</style>
+   

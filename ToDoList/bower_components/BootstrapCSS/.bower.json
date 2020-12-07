@@ -1,0 +1,27 @@
+{
+  "name": "BootstrapCSS",
+  "main": "css/bootstrap.min.css",
+  "ignore": [
+    "source",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/irgaabd/bootstrap_dist",
+  "_release": "2b66876c4a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2b66876c4a8c8748a65da52bcfac4c759576ba81"
+  },
+  "_source": "https://github.com/irgaabd/bootstrap_dist.git",
+  "_target": "*",
+  "_originalSource": "BootstrapCSS",
+  "_direct": true
+}
